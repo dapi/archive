@@ -49,3 +49,15 @@ Composition: keep the central HQ largest. Arrange seven satellite offices compac
 
 Preserve the established image's art direction: deep navy subtly textured background, warm gray isometric cutaway offices, finely illustrated SimCity-like dioramas, soft warm lighting, wood furniture, plants, individual seated workers, dark rounded rectangular nameplates, dotted cable routes and square junction blocks. Same detailed illustration style, perspective, palette and rendering. No selection rings or browser UI. No extra departments, no duplicates, no missing names, no OPS label, no random pseudo-text, no watermark. All eight labels must be exactly correct.
 ```
+
+## Consumer verification
+
+The authenticated Corp deployment was checked on 16 October 2026 using app
+commit `810eb16` and image tag `snapshot-9fac9275b11d`.
+
+- The served PNG checksum matches the archived output above.
+- All eight office hotspots and all eight illustrated nameplates select the
+  corresponding department; Inbox opens its own workspace.
+- Desktop 1440 × 1050 and mobile 390 × 844 have no horizontal overflow.
+- The sticky header, financial privacy toggle and both directory modes work.
+- `npm run build`, `npm run check` and `git diff --check` passed.
