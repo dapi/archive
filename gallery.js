@@ -3,6 +3,7 @@ const simcity = [
   ["hq-departments-futuristic-simcity-legal.png", "Добавление Legal", "experiment", "Legal встроен как отдельный связанный кабинет."],
   ["hq-departments-futuristic-simcity-full.png", "Добавление Research и Content", "experiment", "Карта приведена к полному локальному перечню того этапа."],
   ["hq-departments-futuristic-simcity-media.png", "Добавление Media", "experiment", "Media отделён от редакционной функции Content."],
+  ["hq-simcity-primary.png", "Первый слой до создания Inbox", "superseded", "Рабочая карта августа 2026. Заменена 16 октября: основная карта теперь включает все действующие отделы. Исторический оригинал сохранён без изменений."],
 ];
 
 const islands = [
@@ -49,13 +50,15 @@ const inventory = [
   "assets/simcity/hq-departments-futuristic-simcity-full.png",
   "assets/simcity/hq-departments-futuristic-simcity-media.png",
   "assets/simcity/hq-simcity-primary.png",
+  "assets/simcity/hq-simcity-primary-inbox-20261016.png",
   "assets/simcity/hq-simcity-development.png",
 ];
 
 function card(path, title, status, note, promptSource) {
   const article = document.createElement("article");
   article.className = "card";
-  article.innerHTML = `<img loading="lazy" src="${path}" alt="${title}"><div class="copy"><span class="badge ${status}">${status === "rejected" ? "отклонён" : "эксперимент"}</span><h3>${title}</h3><p>${note}</p><details><summary>Промпт и происхождение</summary><p>Полный prompt и последовательность edit-проходов: <a href="${promptSource}">${promptSource.split('/').pop()}</a>.</p></details></div>`;
+  const statusLabel = status === "rejected" ? "отклонён" : status === "superseded" ? "заменён" : "эксперимент";
+  article.innerHTML = `<img loading="lazy" src="${path}" alt="${title}"><div class="copy"><span class="badge ${status}">${statusLabel}</span><h3>${title}</h3><p>${note}</p><details><summary>Промпт и происхождение</summary><p>Полный prompt и последовательность edit-проходов: <a href="${promptSource}">${promptSource.split('/').pop()}</a>.</p></details></div>`;
   return article;
 }
 

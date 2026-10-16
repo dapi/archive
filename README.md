@@ -26,7 +26,8 @@ This repository owns only:
 
 The current selected projections are:
 
-- `assets/simcity/hq-simcity-primary.png` — primary organization map;
+- `assets/simcity/hq-simcity-primary-inbox-20261016.png` — primary organization
+  map for the authenticated Corp interface, including all active departments;
 - `assets/simcity/hq-simcity-development.png` — development-vector map.
 
 Prompt provenance:
@@ -34,5 +35,6 @@ Prompt provenance:
 - `sources/island-experiments-prompts.md` — project narrative and prompts for
   the island series;
 - `sources/simcity-prompts.md` — readable SimCity prompt history;
+- `sources/simcity-inbox-2026-10-16.md` — Inbox edit, exact prompt and review;
 - `sources/imagegen-calls.jsonl` — exact ImageGen calls recovered from the
   source Codex session log.
